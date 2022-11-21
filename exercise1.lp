@@ -21,7 +21,12 @@ edge(A, B) :- edge1(A, B).
 edge(A, B) :- edge2(A, B).
 distance(A, B, 1) :- edge(A, B).
 distance(X, Z, D + 1) :- edge(X, Y), distance(Y, Z, D), X != Y.
-distance(X, Z, D1) :- distance(X, Z, D1), distance(X, Z, D2), D1 <= D2.
+
+{minDistance(A, B, D)} :- distance(A, B, D).
+:- distance(A, B, _), not minDistance(A, B, _).
+:- minDistance(A, B, D1), minDistance(A, B, D2), D1 != D2.
+:- minDistance(A, B, D1), distance(A, B, D2), D1 > D2.
+
 
 % The distance will be preserved in E-f if A-B,   A->E and B->F.
-:- preserve(A, B), maps(A, E), maps(B, F), distance(A, B, D), not distance(E, F, D).
+:- preserve(A, B), maps(A, E), maps(B, F), minDistance(A, B, D), not minDistance(E, F, D).
