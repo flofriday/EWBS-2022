@@ -19,9 +19,13 @@ node2(B) :- edge2(A, B).
 % Distance
 edge(A, B) :- edge1(A, B).
 edge(A, B) :- edge2(A, B).
-distance(A, B, 1) :- edge(A, B).
-distance(X, Z, D + 1) :- edge(X, Y), distance(Y, Z, D), X != Y.
+numEdges(N) :- N = #count{A, B: edge(A, B)}. % We need num edges to avoid endless search
 
+% Calculate distances
+distance(A, B, 1) :- edge(A, B).
+distance(A, E, D + 1) :- distance(A, T, D), edge(T, E), T != E, numEdges(N), (D+1) < N.
+
+% Select a set of minimal distances
 {minDistance(A, B, D)} :- distance(A, B, D).
 :- distance(A, B, _), not minDistance(A, B, _).
 :- minDistance(A, B, D1), minDistance(A, B, D2), D1 != D2.
