@@ -19,7 +19,7 @@ node2(B) :- edge2(A, B).
 % Distance
 edge(A, B) :- edge1(A, B).
 edge(A, B) :- edge2(A, B).
-distance(A, B, 1) :- edge(A, B), A != B.
+distance(A, B, 1) :- edge(A, B).
 distance(X, Z, D + 1) :- edge(X, Y), distance(Y, Z, D), X != Y.
 distance(X, Z, D1) :- distance(X, Z, D1), distance(X, Z, D2), D1 <= D2.
 
