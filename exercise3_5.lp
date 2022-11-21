@@ -18,9 +18,9 @@ assigned(a, g0).
 assigned(b, g1).
 assigned(h, g2).
 
-%worksFor(b, a).
+worksFor(b, a).
 worksFor(h, a).
-%worksFor(c, b).
+worksFor(c, b).
 worksFor(e, b).
 worksFor(f, b).
 worksFor(h, j).

@@ -7,7 +7,6 @@ person(c, 100).
 person(e, 100).
 person(f, 100).
 
-
 assigned(b, g1).
 
 worksFor(c, b).
