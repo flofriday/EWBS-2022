@@ -24,3 +24,13 @@ zip -r Abgabe exercise*.lp exercise*.jpeg
 
 To visualize the tests I sketched them first in [Excalidraw](https://excalidraw.com/)
 and you can find the sketches in exercise[1..3].png.
+
+### Execise 1 Testcases
+![Drawing Exercises 1](exercise1.png)
+
+### Execise 2 Testcases
+![Drawing Exercises 2](exercise1.png)
+
+### Execise 3 Testcases
+![Drawing Exercises 3](exercise1.png)
+
