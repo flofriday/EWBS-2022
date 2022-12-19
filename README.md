@@ -29,7 +29,7 @@ and you can find the sketches in exercise[1..3].png.
 ![Drawing Exercises 1](exercise1.png)
 
 ### Execise 2 Testcases
-![Drawing Exercises 2](exercise1.2ng)
+![Drawing Exercises 2](exercise2.png)
 
 ### Execise 3 Testcases
 ![Drawing Exercises 3](exercise3.png)
