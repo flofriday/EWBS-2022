@@ -3,6 +3,7 @@
 My solution for the ASP project in EWBS (Introduction into knowledge based systems)
 [TU Wien](https://www.tuwien.at/en/) fall semester 2022.
 
+I got full 17/17 points for this submisssion.
 
 ## Useful commands
 
